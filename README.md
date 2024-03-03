@@ -12,4 +12,4 @@ Then, you can install images of CTFs you want to play : `docker pull jstnvltt/ct
 
 Finally, run the docker-compose file corresponding to the CTF by going in the right repository and executing : `docker-compose up`.
 
-
+Have fun !
