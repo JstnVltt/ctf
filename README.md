@@ -14,9 +14,10 @@ Then, you can install images of CTFs you want to play : `docker pull jstnvltt/ct
 Finally, run the docker-compose file corresponding to the CTF by going in the right repository and executing : `docker-compose up`.
 
 ## Play
-By default, these CTFs are accessible with **SSH on port 8888**.
+By default, these CTFs are accessible with **SSH on localhost port 8888**.
 
 The username and password are **user[CTF_NUMBER]**. 
 
+For example, if you want to do the first CTF and after executing the docker-compose in ctf_1/ : `ssh -p 8888 user1@localhost` and enter `user1` as password.
 
 Have fun !
