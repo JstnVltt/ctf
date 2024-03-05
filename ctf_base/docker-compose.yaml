@@ -1,6 +1,6 @@
 version: '3'
 services:
   ctf:
-    image: ctf_base:latest
+    image: jstnvltt/ctf_base:latest
     build:
       context: .
