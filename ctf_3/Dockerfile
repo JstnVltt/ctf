@@ -4,9 +4,9 @@ RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin no/g;' /etc/ssh
 
 
 # Adding a new user
-ARG USER_NAME=user1
+ARG USER_NAME=user3
 
-# Creation of user 
+# Creation of user
 RUN useradd -m -s /bin/bash $USER_NAME
 
 # Defining a password
@@ -22,9 +22,9 @@ RUN chown $USER_NAME:$USER_NAME /home/$USER_NAME
 RUN chmod 700 /home/$USER_NAME 
 
 # Creating CTF
-RUN touch /home/$USER_NAME/user.txt && echo "Welcome to the first CTF ! To complete it, you need to find another file. Maybe you will need to search to the root of the problem..." > /home/$USER_NAME/user.txt \
-&& touch /root/root.txt && echo "Congratulation ! Here is your flag : CTF{Y0Ur_fIrsT_Fl4g}" > /root/root.txt \
-&& chmod +rx /root
+RUN touch /home/$USER_NAME/user.txt && echo "You will need to find deeper than that !" > /home/$USER_NAME/user.txt \
+&& echo "$USER_NAME ALL=(ALL) NOPASSWD:/bin/find" >> /etc/sudoers \
+&& touch /root/root.txt && echo "Congratulation ! Here is your flag : CTF{f1Nd_th3_TrUtH}" > /root/root.txt
 
 #USER $USER_NAME
 WORKDIR /home/$USER_NAME

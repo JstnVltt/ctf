@@ -2,5 +2,6 @@ version: '3'
 services:
   ctf:
     image: jstnvltt/ctf_base:latest
+    container_name: ctf_base
     build:
       context: .

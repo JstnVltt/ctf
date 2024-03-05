@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 # We install all packages we will need for CTFs
-RUN apt-get update && apt-get install -y openssh-server nano vim cron sudo tree \
+RUN apt-get update && apt-get install -y openssh-server nano vim cron sudo tree python3 unzip tar file curl less binutils \
     && mkdir -p /ctf_config
 
 COPY start.sh /ctf_config

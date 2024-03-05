@@ -1,8 +1,8 @@
 version: '3'
 services:
-  ctf_1:
-    image: jstnvltt/ctf_1:latest
-    container_name: ctf_1
+  ctf_3:
+    image: jstnvltt/ctf_3:latest
+    container_name: ctf_3
     ports:
       - 127.0.0.1:${SSH_PORT:-22}:22
     env_file:
