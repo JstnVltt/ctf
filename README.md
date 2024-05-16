@@ -31,3 +31,6 @@ Then, you execute `ssh -p 8888 user1@localhost` and enter `user1` as password.
 You are now connected to the first CTF.
 
 Have fun !
+
+## Solutions
+You can find every ctf solution on their respective folder, in the file `Solution.md`. In addition, an overview of all CTFs is possible with the file `Overview.md`. 
