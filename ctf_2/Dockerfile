@@ -22,7 +22,7 @@ RUN chown $USER_NAME:$USER_NAME /home/$USER_NAME
 RUN chmod 700 /home/$USER_NAME 
 
 # Creating CTF
-RUN touch /home/$USER_NAME/user.txt && echo "This one is linked to sudo. For more help, go find Linux Privilege Escalation Cheat Sheet." > /home/$USER_NAME/user.txt \
+RUN touch /home/$USER_NAME/user.txt && echo "Hey user 2 ! I gave you access to a sudo command to make your life creating a bash shell ! But I don't remember the command. Maybe you could find it using sudo -h." > /home/$USER_NAME/user.txt \
 && echo "$USER_NAME ALL=(ALL) NOPASSWD:/bin/bash" >> /etc/sudoers \
 && touch /root/root.txt && echo "Congratulation ! Here is your flag : CTF{4sK_sUd0_t0_ElEv4Te}" > /root/root.txt
 
